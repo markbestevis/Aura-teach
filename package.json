@@ -1,0 +1,12 @@
+{
+  "name": "aura-tech",
+  "version": "1.0.0",
+  "description": "AURA TECH - Technology, Innovation, Excellence.",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "express": "^4.21.2"
+  }
+}
