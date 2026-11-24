@@ -1,31 +1,29 @@
-// public/js/main.js
-document.addEventListener('DOMContentLoaded', () => {
-    // 1. Mobile Navigation Toggle
-    const menuToggle = document.getElementById('menu-toggle');
-    const navMenu    = document.getElementById('nav-menu');
+document.addEventListener('DOMContentLoaded', function () {
+    var menuToggle = document.getElementById('menu-toggle');
+    var navMenu = document.getElementById('nav-menu');
 
     if (menuToggle && navMenu) {
-        menuToggle.addEventListener('click', () => {
+        menuToggle.addEventListener('click', function () {
             navMenu.classList.toggle('open');
         });
-        navMenu.querySelectorAll('a').forEach(link => {
-            link.addEventListener('click', () => navMenu.classList.remove('open'));
+        navMenu.querySelectorAll('a').forEach(function (link) {
+            link.addEventListener('click', function () {
+                navMenu.classList.remove('open');
+            });
         });
     }
 
-    // 2. Ambient Cursor Glow (Desktop)
-    const glow = document.getElementById('cursor-glow');
+    var glow = document.getElementById('cursor-glow');
     if (glow && window.matchMedia('(pointer: fine)').matches) {
-        window.addEventListener('mousemove', (e) => {
-            glow.style.left = `${e.clientX}px`;
-            glow.style.top  = `${e.clientY}px`;
+        window.addEventListener('mousemove', function (e) {
+            glow.style.left = e.clientX + 'px';
+            glow.style.top = e.clientY + 'px';
         });
     }
 
-    // 3. Scroll Reveal Observer
-    const revealEls = document.querySelectorAll('.reveal');
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
+    var revealEls = document.querySelectorAll('.reveal');
+    var observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
             if (entry.isIntersecting) {
                 entry.target.classList.add('visible');
                 observer.unobserve(entry.target);
@@ -33,39 +31,40 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }, { threshold: 0.12 });
 
-    revealEls.forEach(el => observer.observe(el));
+    revealEls.forEach(function (el) {
+        observer.observe(el);
+    });
 
-    // 4. Interactive Project Estimator
-    const typeBtns     = document.querySelectorAll('#est-type .est-btn');
-    const scaleBtns    = document.querySelectorAll('#est-scale .est-btn');
-    const addonChecks  = document.querySelectorAll('.addon-check input');
-    const priceDisplay = document.getElementById('est-price');
-    const timeDisplay  = document.getElementById('est-timeline');
-    const applyEstBtn  = document.getElementById('apply-estimate');
+    var typeBtns = document.querySelectorAll('#est-type .est-btn');
+    var scaleBtns = document.querySelectorAll('#est-scale .est-btn');
+    var addonChecks = document.querySelectorAll('.addon-check input');
+    var priceDisplay = document.getElementById('est-price');
+    var timeDisplay = document.getElementById('est-timeline');
+    var applyEstBtn = document.getElementById('apply-estimate');
 
-    let currentEstimate = { label: 'Web Development', price: 600, weeks: 2 };
+    var currentEstimate = { label: 'Web Development', price: 600, weeks: 2 };
 
     function calculateEstimate() {
-        const activeType  = document.querySelector('#est-type .est-btn.active');
-        const activeScale = document.querySelector('#est-scale .est-btn.active');
+        var activeType = document.querySelector('#est-type .est-btn.active');
+        var activeScale = document.querySelector('#est-scale .est-btn.active');
         if (!activeType || !activeScale) return;
 
-        let basePrice = Number(activeType.dataset.price);
-        let baseWeeks = Number(activeType.dataset.weeks);
-        const mult    = Number(activeScale.dataset.mult);
-        const addWks  = Number(activeScale.dataset.addweeks);
+        var basePrice = Number(activeType.dataset.price);
+        var baseWeeks = Number(activeType.dataset.weeks);
+        var mult = Number(activeScale.dataset.mult);
+        var addWks = Number(activeScale.dataset.addweeks);
 
-        let addonsPrice = 0;
-        let addonsWeeks = 0;
-        addonChecks.forEach(chk => {
+        var addonsPrice = 0;
+        var addonsWeeks = 0;
+        addonChecks.forEach(function (chk) {
             if (chk.checked) {
                 addonsPrice += Number(chk.value);
                 addonsWeeks += Number(chk.dataset.weeks || 0);
             }
         });
 
-        const totalPrice = Math.round((basePrice * mult) + addonsPrice);
-        const totalWeeks = baseWeeks + addWks + addonsWeeks;
+        var totalPrice = Math.round((basePrice * mult) + addonsPrice);
+        var totalWeeks = baseWeeks + addWks + addonsWeeks;
 
         currentEstimate = {
             label: activeType.dataset.label,
@@ -73,56 +72,57 @@ document.addEventListener('DOMContentLoaded', () => {
             weeks: totalWeeks
         };
 
-        priceDisplay.textContent = `$${totalPrice.toLocaleString()}`;
-        timeDisplay.textContent  = `${totalWeeks} ${totalWeeks === 1 ? 'Week' : 'Weeks'}`;
+        priceDisplay.textContent = '$' + totalPrice.toLocaleString();
+        timeDisplay.textContent = totalWeeks + (totalWeeks === 1 ? ' Week' : ' Weeks');
     }
 
-    typeBtns.forEach(btn => {
-        btn.addEventListener('click', () => {
-            typeBtns.forEach(b => b.classList.remove('active'));
+    typeBtns.forEach(function (btn) {
+        btn.addEventListener('click', function () {
+            typeBtns.forEach(function (b) { b.classList.remove('active'); });
             btn.classList.add('active');
             calculateEstimate();
         });
     });
 
-    scaleBtns.forEach(btn => {
-        btn.addEventListener('click', () => {
-            scaleBtns.forEach(b => b.classList.remove('active'));
+    scaleBtns.forEach(function (btn) {
+        btn.addEventListener('click', function () {
+            scaleBtns.forEach(function (b) { b.classList.remove('active'); });
             btn.classList.add('active');
             calculateEstimate();
         });
     });
 
-    addonChecks.forEach(chk => chk.addEventListener('change', calculateEstimate));
+    addonChecks.forEach(function (chk) {
+        chk.addEventListener('change', calculateEstimate);
+    });
 
     if (applyEstBtn) {
-        applyEstBtn.addEventListener('click', () => {
-            const serviceSelect = document.getElementById('service');
-            const budgetInput   = document.getElementById('budget');
-            const msgBox        = document.getElementById('message');
+        applyEstBtn.addEventListener('click', function () {
+            var serviceSelect = document.getElementById('service');
+            var budgetInput = document.getElementById('budget');
+            var msgBox = document.getElementById('message');
 
             if (serviceSelect) serviceSelect.value = currentEstimate.label;
-            if (budgetInput) budgetInput.value = `~$${currentEstimate.price.toLocaleString()} (${currentEstimate.weeks} wks)`;
+            if (budgetInput) budgetInput.value = '~$' + currentEstimate.price.toLocaleString() + ' (' + currentEstimate.weeks + ' wks)';
             if (msgBox && !msgBox.value.trim()) {
-                msgBox.value = `Hi AURA TECH, I used your estimator for a ${currentEstimate.label} project (~$${currentEstimate.price.toLocaleString()}, ${currentEstimate.weeks} weeks). Here are my details:\n`;
+                msgBox.value = 'Hi AURA TECH, I used your estimator for a ' + currentEstimate.label + ' project (~$' + currentEstimate.price.toLocaleString() + ', ' + currentEstimate.weeks + ' weeks). Here are my details:\n';
             }
 
             document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
         });
     }
-    // 5. Product Waitlist Modal
-    const modal         = document.getElementById('waitlist-modal');
-    const modalClose    = document.getElementById('modal-close');
-    const modalTitle    = document.getElementById('modal-title');
-    const waitlistProd  = document.getElementById('waitlist-product');
-    const waitlistForm  = document.getElementById('waitlist-form');
-    const waitlistStat  = document.getElementById('waitlist-status');
-    const waitlistSub   = document.getElementById('waitlist-submit');
+    var modal = document.getElementById('waitlist-modal');
+    var modalClose = document.getElementById('modal-close');
+    var modalTitle = document.getElementById('modal-title');
+    var waitlistProd = document.getElementById('waitlist-product');
+    var waitlistForm = document.getElementById('waitlist-form');
+    var waitlistStat = document.getElementById('waitlist-status');
+    var waitlistSub = document.getElementById('waitlist-submit');
 
-    document.querySelectorAll('.waitlist-trigger').forEach(btn => {
-        btn.addEventListener('click', () => {
-            const product = btn.dataset.product;
-            modalTitle.textContent = `Join ${product}`;
+    document.querySelectorAll('.waitlist-trigger').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+            var product = btn.dataset.product;
+            modalTitle.textContent = 'Join ' + product;
             waitlistProd.value = product;
             waitlistStat.textContent = '';
             waitlistStat.className = 'contact-status';
@@ -131,30 +131,34 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     if (modalClose) {
-        modalClose.addEventListener('click', () => modal.classList.remove('open'));
+        modalClose.addEventListener('click', function () {
+            modal.classList.remove('open');
+        });
     }
     if (modal) {
-        modal.addEventListener('click', (e) => {
-            if (e.target === modal) modal.classList.remove('open');
+        modal.addEventListener('click', function (e) {
+            if (e.target === modal) {
+                modal.classList.remove('open');
+            }
         });
     }
 
     if (waitlistForm) {
-        waitlistForm.addEventListener('submit', async (e) => {
+        waitlistForm.addEventListener('submit', async function (e) {
             e.preventDefault();
-            const email   = document.getElementById('waitlist-email').value.trim();
-            const product = waitlistProd.value;
+            var email = document.getElementById('waitlist-email').value.trim();
+            var product = waitlistProd.value;
 
             waitlistSub.disabled = true;
             waitlistSub.textContent = 'Joining...';
 
             try {
-                const res = await fetch('/api/waitlist', {
+                var res = await fetch('/api/waitlist', {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify({ email, product })
+                    body: JSON.stringify({ email: email, product: product })
                 });
-                const data = await res.json();
+                var data = await res.json();
                 if (res.ok && data.ok) {
                     waitlistStat.textContent = data.message;
                     waitlistStat.className = 'contact-status success';
@@ -163,7 +167,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     waitlistStat.textContent = data.error || 'Unable to join waitlist.';
                     waitlistStat.className = 'contact-status error';
                 }
-            } catch {
+            } catch (err) {
                 waitlistStat.textContent = 'Network error. Please try again.';
                 waitlistStat.className = 'contact-status error';
             } finally {
@@ -173,20 +177,19 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // 6. Contact Form Submission
-    const form   = document.getElementById('contact-form');
-    const status = document.getElementById('contact-status');
-    const submit = document.getElementById('contact-submit');
+    var form = document.getElementById('contact-form');
+    var status = document.getElementById('contact-status');
+    var submit = document.getElementById('contact-submit');
 
     if (form) {
-        form.addEventListener('submit', async (e) => {
+        form.addEventListener('submit', async function (e) {
             e.preventDefault();
 
-            const name    = document.getElementById('name').value.trim();
-            const email   = document.getElementById('email').value.trim();
-            const service = document.getElementById('service').value;
-            const budget  = document.getElementById('budget').value.trim();
-            const message = document.getElementById('message').value.trim();
+            var name = document.getElementById('name').value.trim();
+            var email = document.getElementById('email').value.trim();
+            var service = document.getElementById('service').value;
+            var budget = document.getElementById('budget').value.trim();
+            var message = document.getElementById('message').value.trim();
 
             if (!name || !email || !message) {
                 setStatus('Please fill in all required fields.', 'error');
@@ -198,12 +201,12 @@ document.addEventListener('DOMContentLoaded', () => {
             setStatus('', '');
 
             try {
-                const res = await fetch('/api/contact', {
-                    method:  'POST',
+                var res = await fetch('/api/contact', {
+                    method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
-                    body:    JSON.stringify({ name, email, service, budget, message }),
+                    body: JSON.stringify({ name: name, email: email, service: service, budget: budget, message: message })
                 });
-                const data = await res.json();
+                var data = await res.json();
 
                 if (res.ok && data.ok) {
                     setStatus(data.message || 'Message sent successfully.', 'success');
@@ -211,7 +214,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 } else {
                     setStatus(data.error || 'Something went wrong. Please try again.', 'error');
                 }
-            } catch {
+            } catch (err) {
                 setStatus('Network error. Please check your connection and try again.', 'error');
             } finally {
                 submit.disabled = false;
