@@ -14,7 +14,7 @@
 
 <header id="navbar">
     <div class="container navbar">
-        <a href="#home" class="logo">AURA<span>TECH</span></a>
+        <a href="/index.html" class="logo">AURA<span>TECH</span></a>
 
         <button class="menu-toggle" id="menu-toggle" aria-label="Toggle navigation">
             <span></span><span></span><span></span>
@@ -22,21 +22,19 @@
 
         <nav id="nav-menu">
             <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#work">Work</a></li>
-                <li><a href="#estimator">Estimator</a></li>
-                <li><a href="#products">Products</a></li>
-                <li><a href="#contact" class="nav-cta">Start a Project</a></li>
+                <li><a href="/index.html" class="active-link">Home</a></li>
+                <li><a href="/about.html">About</a></li>
+                <li><a href="/services.html">Services</a></li>
+                <li><a href="/work.html">Work</a></li>
+                <li><a href="/products.html">Products</a></li>
+                <li><a href="/contact.html" class="nav-cta">Start a Project</a></li>
             </ul>
         </nav>
     </div>
 </header>
 
 <main>
-    <!-- HERO -->
-    <section class="hero" id="home">
+    <section class="hero">
         <div class="hero-grid-bg"></div>
         <div class="container hero-content reveal">
             <span class="hero-label">NEXT-GEN DIGITAL ENGINEERING</span>
@@ -49,8 +47,8 @@
                 and intelligent automation systems built to scale your operations.
             </p>
             <div class="hero-actions">
-                <a href="#estimator" class="btn">Estimate Your Project</a>
-                <a href="#work" class="btn-outline">View Our Work</a>
+                <a href="/services.html" class="btn">Explore Services &amp; Quote</a>
+                <a href="/work.html" class="btn-outline">View Our Work</a>
             </div>
 
             <div class="metrics-bar">
@@ -72,292 +70,77 @@
         </div>
     </section>
 
-    <!-- ABOUT -->
-    <section class="section about" id="about">
-        <div class="container about-grid reveal">
-            <div class="about-text">
-                <small class="eyebrow">WHO WE ARE</small>
-                <h2>Technology With Purpose</h2>
-                <p>
-                    AURA TECH is a digital engineering studio dedicated to building reliable,
-                    high-impact software. We bridge the gap between sleek design and heavy-duty
-                    backend automation so businesses can operate faster with fewer manual bottlenecks.
-                </p>
-                <ul class="check-list">
-                    <li><span>✦</span> Clean, scalable full-stack architecture</li>
-                    <li><span>✦</span> Security-first engineering &amp; fast load speeds</li>
-                    <li><span>✦</span> Direct founder-to-engineer collaboration</li>
-                </ul>
-            </div>
-            <div class="about-panel">
-                <div class="code-card">
-                    <div class="code-header">
-                        <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
-                        <small>aura-core.config.js</small>
-                    </div>
-                    <pre><code>const AURA_TECH = {
-  mission: "Automate &amp; Elevate",
-  stack: ["Node.js", "AI Bots", "Cloud UI"],
-  performance: "99/100 Lighthouse",
-  status: "Ready to Deploy"
-};</code></pre>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- SERVICES -->
-    <section class="section" id="services">
+    <section class="section about">
         <div class="container">
             <div class="section-heading reveal">
-                <small>WHAT WE DO</small>
-                <h2>Core Capabilities</h2>
-                <p>End-to-end digital solutions designed to move your business forward.</p>
+                <small>EXPLORE AURA TECH</small>
+                <h2>Tap Any Area To Dive Deeper</h2>
+                <p>Select a category below to open its dedicated page.</p>
             </div>
 
             <div class="services-grid">
-                <div class="card reveal">
+                <a href="/services.html" class="card link-card reveal">
                     <div class="card-icon">✦</div>
-                    <h3>Web Development</h3>
+                    <h3>Services &amp; Estimator</h3>
                     <p>
-                        Ultra-fast, responsive web applications and luxury brand websites
-                        engineered to convert visitors into clients.
+                        Explore Web Development, Telegram &amp; WhatsApp Bots, Custom Software,
+                        and calculate an instant project estimate.
                     </p>
-                    <ul class="card-tags">
-                        <li>Landing Pages</li>
-                        <li>Web Apps</li>
-                        <li>E-Commerce</li>
-                    </ul>
-                </div>
+                    <div class="work-meta">Open Services &amp; Quote →</div>
+                </a>
 
-                <div class="card reveal">
-                    <div class="card-icon">⚙</div>
-                    <h3>Bot &amp; AI Automation</h3>
-                    <p>
-                        Custom Telegram &amp; WhatsApp bots, CRM pipelines, and automated
-                        booking/order systems that work while you sleep.
-                    </p>
-                    <ul class="card-tags">
-                        <li>Telegram Bots</li>
-                        <li>WhatsApp API</li>
-                        <li>Workflows</li>
-                    </ul>
-                </div>
-
-                <div class="card reveal">
+                <a href="/work.html" class="card link-card reveal">
                     <div class="card-icon">◆</div>
-                    <h3>Custom Software</h3>
+                    <h3>Selected Work</h3>
                     <p>
-                        Tailored internal dashboards, inventory trackers, and SaaS platforms
-                        built specifically around your business logic.
+                        Inspect our deployed automation engines, fintech portals,
+                        and internal operations dashboards.
                     </p>
-                    <ul class="card-tags">
-                        <li>Dashboards</li>
-                        <li>APIs</li>
-                        <li>SaaS MVPs</li>
-                    </ul>
-                </div>
+                    <div class="work-meta">Open Portfolio →</div>
+                </a>
+
+                <a href="/products.html" class="card link-card reveal">
+                    <div class="card-icon">⚙</div>
+                    <h3>AURA Products</h3>
+                    <p>
+                        Discover AURA Business Suite, AURA Store, and AURA Management—and
+                        join the early access waitlist.
+                    </p>
+                    <div class="work-meta">Open Product Hub →</div>
+                </a>
             </div>
         </div>
     </section>
 
-    <!-- PORTFOLIO / SELECTED WORK -->
-    <section class="section about" id="work">
+    <section class="section">
         <div class="container">
-            <div class="section-heading reveal">
-                <small>SELECTED WORK</small>
-                <h2>Engineered For Impact</h2>
-                <p>A glimpse into the systems and interfaces we build for clients.</p>
-            </div>
-
-            <div class="services-grid">
-                <div class="card work-card reveal">
-                    <span class="product-tag">AUTOMATION BOT</span>
-                    <h3>AutoOrder Telegram Engine</h3>
-                    <p>
-                        Automated customer ordering, instant receipt generation, and live
-                        admin notifications—cutting manual order processing time by 80%.
-                    </p>
-                    <div class="work-meta">Node.js • Telegram API • JSON DB</div>
+            <div class="contact-box reveal" style="text-align:center;">
+                <div class="section-heading" style="margin-bottom:20px;">
+                    <small>READY TO LAUNCH?</small>
+                    <h2>Let's Build Your Next System</h2>
+                    <p>Tell us what you need and get a tailored engineering plan within 24 hours.</p>
                 </div>
-
-                <div class="card work-card reveal">
-                    <span class="product-tag">WEB PLATFORM</span>
-                    <h3>Executive Fintech Portal</h3>
-                    <p>
-                        High-security client onboarding portal with real-time analytics,
-                        encrypted document uploads, and sub-second page transitions.
-                    </p>
-                    <div class="work-meta">Full-Stack • REST API • Responsive UI</div>
+                <div class="hero-actions">
+                    <a href="/contact.html" class="btn">Start a Project →</a>
+                    <a href="/about.html" class="btn-outline">Learn About Us</a>
                 </div>
-
-                <div class="card work-card reveal">
-                    <span class="product-tag">INTERNAL SYSTEM</span>
-                    <h3>OmniStock Operations Hub</h3>
-                    <p>
-                        Unified inventory and dispatch dashboard connecting storefront sales
-                        directly to warehouse fulfillment teams.
-                    </p>
-                    <div class="work-meta">Custom Software • Webhooks • CSV Export</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- INTERACTIVE PROJECT ESTIMATOR -->
-    <section class="section" id="estimator">
-        <div class="container">
-            <div class="section-heading reveal">
-                <small>INSTANT QUOTE</small>
-                <h2>Project Cost &amp; Timeline Estimator</h2>
-                <p>Configure your project scope to get an instant ballpark estimate.</p>
-            </div>
-
-            <div class="estimator-box reveal">
-                <div class="estimator-controls">
-                    <div class="est-group">
-                        <label>1. Select Solution Type</label>
-                        <div class="est-options" id="est-type">
-                            <button type="button" class="est-btn active" data-price="600" data-weeks="2" data-label="Web Development">Website / Web App</button>
-                            <button type="button" class="est-btn" data-price="450" data-weeks="1" data-label="Bot &amp; Automation">Telegram / WhatsApp Bot</button>
-                            <button type="button" class="est-btn" data-price="1200" data-weeks="4" data-label="Custom Software">Custom Software</button>
-                        </div>
-                    </div>
-
-                    <div class="est-group">
-                        <label>2. Project Complexity</label>
-                        <div class="est-options" id="est-scale">
-                            <button type="button" class="est-btn active" data-mult="1" data-addweeks="0">Starter / MVP</button>
-                            <button type="button" class="est-btn" data-mult="1.6" data-addweeks="2">Growth / Standard</button>
-                            <button type="button" class="est-btn" data-mult="2.4" data-addweeks="4">Enterprise / Full Scale</button>
-                        </div>
-                    </div>
-
-                    <div class="est-group">
-                        <label>3. Add-On Integrations</label>
-                        <div class="est-addons">
-                            <label class="addon-check"><input type="checkbox" value="250" data-weeks="1"> Payment Gateway</label>
-                            <label class="addon-check"><input type="checkbox" value="300" data-weeks="1"> Admin Dashboard</label>
-                            <label class="addon-check"><input type="checkbox" value="350" data-weeks="1"> AI Assistant Integration</label>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="estimator-result">
-                    <small>ESTIMATED INVESTMENT</small>
-                    <div class="est-price" id="est-price">$600</div>
-                    <div class="est-timeline">Est. Delivery: <strong id="est-timeline">2 Weeks</strong></div>
-                    <p>Includes responsive design, deployment setup, and 30 days of post-launch support.</p>
-                    <button type="button" class="btn" id="apply-estimate">Lock In This Estimate ↓</button>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- PRODUCTS -->
-    <section class="section about" id="products">
-        <div class="container">
-            <div class="section-heading reveal">
-                <small>OUR ECOSYSTEM</small>
-                <h2>Innovation In Progress</h2>
-                <p>Proprietary software products built by AURA TECH. Join early access.</p>
-            </div>
-
-            <div class="products-grid">
-                <div class="card product-card reveal">
-                    <span class="product-tag">COMING SOON</span>
-                    <h3>AURA Business Suite</h3>
-                    <p>
-                        An all-in-one business management platform for customers,
-                        orders, and automated WhatsApp communication.
-                    </p>
-                    <button type="button" class="btn-outline btn-sm waitlist-trigger" data-product="AURA Business Suite">Join Early Access</button>
-                </div>
-
-                <div class="card product-card reveal">
-                    <span class="product-tag">IN DEVELOPMENT</span>
-                    <h3>AURA Store</h3>
-                    <p>
-                        A streamlined commerce engine that lets businesses launch and
-                        manage high-speed online storefronts in minutes.
-                    </p>
-                    <button type="button" class="btn-outline btn-sm waitlist-trigger" data-product="AURA Store">Join Early Access</button>
-                </div>
-
-                <div class="card product-card reveal">
-                    <span class="product-tag">PLANNED</span>
-                    <h3>AURA Management</h3>
-                    <p>
-                        Smart internal operations, team task routing, and analytics
-                        tools designed to eliminate repetitive admin work.
-                    </p>
-                    <button type="button" class="btn-outline btn-sm waitlist-trigger" data-product="AURA Management">Join Early Access</button>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- CONTACT -->
-    <section class="section" id="contact">
-        <div class="container">
-            <div class="contact-box reveal">
-                <div class="section-heading">
-                    <small>LET'S WORK TOGETHER</small>
-                    <h2>Have A Project In Mind?</h2>
-                    <p>Tell us about your idea and we will respond within 24 hours.</p>
-                </div>
-
-                <form id="contact-form" class="contact-form" novalidate>
-                    <div class="form-row">
-                        <input type="text" id="name" name="name" placeholder="Your name *" required maxlength="100">
-                        <input type="email" id="email" name="email" placeholder="Your email *" required maxlength="150">
-                    </div>
-                    <div class="form-row">
-                        <select id="service" name="service">
-                            <option value="Web Development">Service: Web Development</option>
-                            <option value="Bot &amp; Automation">Service: Bot &amp; Automation</option>
-                            <option value="Custom Software">Service: Custom Software</option>
-                            <option value="Other">Service: Other / Consultation</option>
-                        </select>
-                        <input type="text" id="budget" name="budget" placeholder="Estimated budget (e.g. $600 - $1,500)" maxlength="60">
-                    </div>
-                    <textarea id="message" name="message" placeholder="Tell us about your project goals, features, and timeline *" required maxlength="2000" rows="5"></textarea>
-                    <button type="submit" class="btn btn-full" id="contact-submit">Send Project Inquiry</button>
-                    <p id="contact-status" class="contact-status" role="status" aria-live="polite"></p>
-                </form>
             </div>
         </div>
     </section>
 </main>
 
-<!-- WAITLIST MODAL -->
-<div class="modal-backdrop" id="waitlist-modal" aria-hidden="true">
-    <div class="modal-card">
-        <button type="button" class="modal-close" id="modal-close" aria-label="Close modal">&times;</button>
-        <span class="product-tag">EARLY ACCESS</span>
-        <h3 id="modal-title">Join AURA Waitlist</h3>
-        <p>Be the first to get beta access and launch discounts.</p>
-        <form id="waitlist-form">
-            <input type="hidden" id="waitlist-product" name="product">
-            <input type="email" id="waitlist-email" name="email" placeholder="Enter your best email" required>
-            <button type="submit" class="btn btn-full" id="waitlist-submit">Request Early Access</button>
-            <p id="waitlist-status" class="contact-status"></p>
-        </form>
-    </div>
-</div>
-
 <footer>
     <div class="container footer-grid">
         <div>
-            <a href="#home" class="logo">AURA<span>TECH</span></a>
+            <a href="/index.html" class="logo">AURA<span>TECH</span></a>
             <p class="footer-tagline">Technology. Innovation. Excellence.</p>
         </div>
         <div class="footer-links">
-            <a href="#about">About</a>
-            <a href="#services">Services</a>
-            <a href="#work">Work</a>
-            <a href="#estimator">Estimator</a>
-            <a href="#contact">Contact</a>
+            <a href="/about.html">About</a>
+            <a href="/services.html">Services</a>
+            <a href="/work.html">Work</a>
+            <a href="/products.html">Products</a>
+            <a href="/contact.html">Contact</a>
         </div>
         <div class="footer-copy">
             © <span id="year"></span> <span>AURA TECH</span>. All Rights Reserved.
