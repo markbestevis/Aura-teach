@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore selected engineering projects and automation systems built by AURA TECH.">
+    <meta name="theme-color" content="#080808">
+    <title>Selected Work | AURA TECH</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+<div class="cursor-glow" id="cursor-glow"></div>
+
+<header id="navbar">
+    <div class="container navbar">
+        <a href="/index.html" class="logo">AURA<span>TECH</span></a>
+
+        <button class="menu-toggle" id="menu-toggle" aria-label="Toggle navigation">
+            <span></span><span></span><span></span>
+        </button>
+
+        <nav id="nav-menu">
+            <ul class="nav-links">
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/about.html">About</a></li>
+                <li><a href="/services.html">Services</a></li>
+                <li><a href="/work.html" class="active-link">Work</a></li>
+                <li><a href="/products.html">Products</a></li>
+                <li><a href="/contact.html" class="nav-cta">Start a Project</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<main>
+    <section class="page-banner">
+        <div class="container reveal">
+            <small class="eyebrow">SELECTED WORK</small>
+            <h1>Engineered For <span>Impact</span></h1>
+            <p>A closer look at the automation engines, portals, and internal platforms we build.</p>
+        </div>
+    </section>
+
+    <section class="section about">
+        <div class="container">
+            <div class="services-grid">
+                <div class="card work-card reveal">
+                    <span class="product-tag">AUTOMATION BOT</span>
+                    <h3>AutoOrder Telegram Engine</h3>
+                    <p>
+                        Automated customer ordering, instant receipt generation, and live
+                        admin notifications—cutting manual order processing time by 80%.
+                    </p>
+                    <ul class="card-tags">
+                        <li>80% Faster Orders</li>
+                        <li>24/7 Auto-Receipts</li>
+                    </ul>
+                    <div class="work-meta">Node.js • Telegram API • JSON DB</div>
+                </div>
+
+                <div class="card work-card reveal">
+                    <span class="product-tag">WEB PLATFORM</span>
+                    <h3>Executive Fintech Portal</h3>
+                    <p>
+                        High-security client onboarding portal with real-time analytics,
+                        encrypted document uploads, and sub-second page transitions.
+                    </p>
+                    <ul class="card-tags">
+                        <li>99/100 Speed</li>
+                        <li>Encrypted Uploads</li>
+                    </ul>
+                    <div class="work-meta">Full-Stack • REST API • Responsive UI</div>
+                </div>
+
+                <div class="card work-card reveal">
+                    <span class="product-tag">INTERNAL SYSTEM</span>
+                    <h3>OmniStock Operations Hub</h3>
+                    <p>
+                        Unified inventory and dispatch dashboard connecting storefront sales
+                        directly to warehouse fulfillment teams in real time.
+                    </p>
+                    <ul class="card-tags">
+                        <li>Live Stock Sync</li>
+                        <li>CSV Reporting</li>
+                    </ul>
+                    <div class="work-meta">Custom Software • Webhooks • CSV Export</div>
+                </div>
+            </div>
+
+            <div class="contact-box reveal" style="margin-top:60px; text-align:center;">
+                <div class="section-heading" style="margin-bottom:20px;">
+                    <small>BUILD SOMETHING SIMILAR</small>
+                    <h2>Want A Custom System Like These?</h2>
+                    <p>Get an instant quote or send us your project requirements.</p>
+                </div>
+                <div class="hero-actions">
+                    <a href="/services.html#estimator" class="btn">Calculate Project Quote</a>
+                    <a href="/contact.html" class="btn-outline">Request Consultation</a>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <div class="container footer-grid">
+        <div>
+            <a href="/index.html" class="logo">AURA<span>TECH</span></a>
+            <p class="footer-tagline">Technology. Innovation. Excellence.</p>
+        </div>
+        <div class="footer-links">
+            <a href="/about.html">About</a>
+            <a href="/services.html">Services</a>
+            <a href="/work.html">Work</a>
+            <a href="/products.html">Products</a>
+            <a href="/contact.html">Contact</a>
+        </div>
+        <div class="footer-copy">
+            © <span id="year"></span> <span>AURA TECH</span>. All Rights Reserved.
+        </div>
+    </div>
+</footer>
+
+<script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+<script src="/js/main.js"></script>
+</body>
+</html>
