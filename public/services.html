@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore AURA TECH services and calculate an instant project cost and timeline estimate.">
+    <meta name="theme-color" content="#080808">
+    <title>Services &amp; Estimator | AURA TECH</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+<div class="cursor-glow" id="cursor-glow"></div>
+
+<header id="navbar">
+    <div class="container navbar">
+        <a href="/index.html" class="logo">AURA<span>TECH</span></a>
+
+        <button class="menu-toggle" id="menu-toggle" aria-label="Toggle navigation">
+            <span></span><span></span><span></span>
+        </button>
+
+        <nav id="nav-menu">
+            <ul class="nav-links">
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/about.html">About</a></li>
+                <li><a href="/services.html" class="active-link">Services</a></li>
+                <li><a href="/work.html">Work</a></li>
+                <li><a href="/products.html">Products</a></li>
+                <li><a href="/contact.html" class="nav-cta">Start a Project</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<main>
+    <section class="page-banner">
+        <div class="container reveal">
+            <small class="eyebrow">WHAT WE DO</small>
+            <h1>Core <span>Capabilities</span></h1>
+            <p>End-to-end websites, automation bots, and custom software built around your business.</p>
+        </div>
+    </section>
+
+    <section class="section about">
+        <div class="container">
+            <div class="services-grid">
+                <div class="card reveal">
+                    <div class="card-icon">✦</div>
+                    <h3>Web Development</h3>
+                    <p>
+                        Ultra-fast, responsive web applications and luxury brand websites
+                        engineered to convert visitors into paying clients.
+                    </p>
+                    <ul class="card-tags">
+                        <li>Landing Pages</li>
+                        <li>Web Apps</li>
+                        <li>E-Commerce</li>
+                    </ul>
+                </div>
+
+                <div class="card reveal">
+                    <div class="card-icon">⚙</div>
+                    <h3>Bot &amp; AI Automation</h3>
+                    <p>
+                        Custom Telegram &amp; WhatsApp bots, CRM pipelines, and automated
+                        booking or order systems that operate 24/7.
+                    </p>
+                    <ul class="card-tags">
+                        <li>Telegram Bots</li>
+                        <li>WhatsApp API</li>
+                        <li>Workflows</li>
+                    </ul>
+                </div>
+
+                <div class="card reveal">
+                    <div class="card-icon">◆</div>
+                    <h3>Custom Software</h3>
+                    <p>
+                        Tailored internal dashboards, inventory trackers, and SaaS platforms
+                        engineered specifically around your workflow.
+                    </p>
+                    <ul class="card-tags">
+                        <li>Dashboards</li>
+                        <li>APIs</li>
+                        <li>SaaS MVPs</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="estimator">
+        <div class="container">
+            <div class="section-heading reveal">
+                <small>INSTANT QUOTE</small>
+                <h2>Project Cost &amp; Timeline Estimator</h2>
+                <p>Configure your project scope below, then tap Lock In to send it to our team.</p>
+            </div>
+
+            <div class="estimator-box reveal">
+                <div class="estimator-controls">
+                    <div class="est-group">
+                        <label>1. Select Solution Type</label>
+                        <div class="est-options" id="est-type">
+                            <button type="button" class="est-btn active" data-price="600" data-weeks="2" data-label="Web Development">Website / Web App</button>
+                            <button type="button" class="est-btn" data-price="450" data-weeks="1" data-label="Bot &amp; Automation">Telegram / WhatsApp Bot</button>
+                            <button type="button" class="est-btn" data-price="1200" data-weeks="4" data-label="Custom Software">Custom Software</button>
+                        </div>
+                    </div>
+
+                    <div class="est-group">
+                        <label>2. Project Complexity</label>
+                        <div class="est-options" id="est-scale">
+                            <button type="button" class="est-btn active" data-mult="1" data-addweeks="0">Starter / MVP</button>
+                            <button type="button" class="est-btn" data-mult="1.6" data-addweeks="2">Growth / Standard</button>
+                            <button type="button" class="est-btn" data-mult="2.4" data-addweeks="4">Enterprise / Full Scale</button>
+                        </div>
+                    </div>
+
+                    <div class="est-group">
+                        <label>3. Add-On Integrations</label>
+                        <div class="est-addons">
+                            <label class="addon-check"><input type="checkbox" value="250" data-weeks="1"> Payment Gateway</label>
+                            <label class="addon-check"><input type="checkbox" value="300" data-weeks="1"> Admin Dashboard</label>
+                            <label class="addon-check"><input type="checkbox" value="350" data-weeks="1"> AI Assistant Integration</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="estimator-result">
+                    <small>ESTIMATED INVESTMENT</small>
+                    <div class="est-price" id="est-price">$600</div>
+                    <div class="est-timeline">Est. Delivery: <strong id="est-timeline">2 Weeks</strong></div>
+                    <p>Includes responsive design, deployment setup, and 30 days of post-launch support.</p>
+                    <button type="button" class="btn" id="apply-estimate">Lock In &amp; Continue →</button>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <div class="container footer-grid">
+        <div>
+            <a href="/index.html" class="logo">AURA<span>TECH</span></a>
+            <p class="footer-tagline">Technology. Innovation. Excellence.</p>
+        </div>
+        <div class="footer-links">
+            <a href="/about.html">About</a>
+            <a href="/services.html">Services</a>
+            <a href="/work.html">Work</a>
+            <a href="/products.html">Products</a>
+            <a href="/contact.html">Contact</a>
+        </div>
+        <div class="footer-copy">
+            © <span id="year"></span> <span>AURA TECH</span>. All Rights Reserved.
+        </div>
+    </div>
+</footer>
+
+<script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+<script src="/js/main.js"></script>
+</body>
+</html>
