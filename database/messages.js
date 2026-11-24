@@ -1,50 +1,96 @@
 // database/messages.js
-// Lightweight file-based storage for contact form submissions.
-// No native dependencies (keeps deployment simple on any host).
-
 const fs   = require('fs');
 const path = require('path');
 
-const DB_FILE = path.join(__dirname, 'messages.json');
+const DB_FILE       = path.join(__dirname, 'messages.json');
+const WAITLIST_FILE = path.join(__dirname, 'waitlist.json');
 
-function readAll() {
-  if (!fs.existsSync(DB_FILE)) return [];
+function readJson(file) {
+  if (!fs.existsSync(file)) return [];
   try {
-    const raw = fs.readFileSync(DB_FILE, 'utf8');
+    const raw = fs.readFileSync(file, 'utf8');
     return raw.trim() ? JSON.parse(raw) : [];
   } catch {
     return [];
   }
 }
 
-function writeAll(messages) {
-  fs.writeFileSync(DB_FILE, JSON.stringify(messages, null, 2));
+function writeJson(file, data) {
+  fs.writeFileSync(file, JSON.stringify(data, null, 2));
 }
 
-function addMessage({ name, email, message }) {
-  const messages = readAll();
+function generateId() {
+  return Date.now().toString(36) + Math.random().toString(36).slice(2, 7);
+}
+
+// ── Contact Messages ──────────────────────────────────────────────────────────
+function addMessage({ name, email, service = 'General', budget = 'Not specified', message }) {
+  const messages = readJson(DB_FILE);
   const entry = {
-    id:        Date.now().toString(36) + Math.random().toString(36).slice(2, 7),
+    id: generateId(),
     name,
     email,
+    service,
+    budget,
     message,
     createdAt: new Date().toISOString(),
-    read:      false,
+    read: false,
   };
   messages.push(entry);
-  writeAll(messages);
+  writeJson(DB_FILE, messages);
   return entry;
 }
 
 function getAllMessages() {
-  return readAll().sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
+  return readJson(DB_FILE).sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
 }
 
 function markRead(id) {
-  const messages = readAll();
+  const messages = readJson(DB_FILE);
   const msg = messages.find(m => m.id === id);
-  if (msg) { msg.read = true; writeAll(messages); }
+  if (msg) {
+    msg.read = true;
+    writeJson(DB_FILE, messages);
+  }
   return msg || null;
 }
 
-module.exports = { addMessage, getAllMessages, markRead };
+function deleteMessage(id) {
+  const messages = readJson(DB_FILE);
+  const filtered = messages.filter(m => m.id !== id);
+  if (filtered.length !== messages.length) {
+    writeJson(DB_FILE, filtered);
+    return true;
+  }
+  return false;
+}
+
+// ── Product Waitlist ──────────────────────────────────────────────────────────
+function addWaitlist({ email, product }) {
+  const list = readJson(WAITLIST_FILE);
+  const exists = list.find(item => item.email.toLowerCase() === email.toLowerCase() && item.product === product);
+  if (exists) return { entry: exists, duplicate: true };
+
+  const entry = {
+    id: generateId(),
+    email,
+    product,
+    createdAt: new Date().toISOString(),
+  };
+  list.push(entry);
+  writeJson(WAITLIST_FILE, list);
+  return { entry, duplicate: false };
+}
+
+function getAllWaitlist() {
+  return readJson(WAITLIST_FILE).sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
+}
+
+module.exports = {
+  addMessage,
+  getAllMessages,
+  markRead,
+  deleteMessage,
+  addWaitlist,
+  getAllWaitlist,
+};
