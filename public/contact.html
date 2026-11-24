@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Start your project with AURA TECH. Send us your requirements and get a response within 24 hours.">
+    <meta name="theme-color" content="#080808">
+    <title>Start a Project | AURA TECH</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+<div class="cursor-glow" id="cursor-glow"></div>
+
+<header id="navbar">
+    <div class="container navbar">
+        <a href="/index.html" class="logo">AURA<span>TECH</span></a>
+
+        <button class="menu-toggle" id="menu-toggle" aria-label="Toggle navigation">
+            <span></span><span></span><span></span>
+        </button>
+
+        <nav id="nav-menu">
+            <ul class="nav-links">
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/about.html">About</a></li>
+                <li><a href="/services.html">Services</a></li>
+                <li><a href="/work.html">Work</a></li>
+                <li><a href="/products.html">Products</a></li>
+                <li><a href="/contact.html" class="nav-cta">Start a Project</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<main>
+    <section class="page-banner">
+        <div class="container reveal">
+            <small class="eyebrow">LET'S WORK TOGETHER</small>
+            <h1>Have A Project In <span>Mind?</span></h1>
+            <p>Tell us about your idea and our engineering team will respond within 24 hours.</p>
+        </div>
+    </section>
+
+    <section class="section about">
+        <div class="container">
+            <div class="contact-box reveal">
+                <form id="contact-form" class="contact-form" novalidate>
+                    <div class="form-row">
+                        <input type="text" id="name" name="name" placeholder="Your name *" required maxlength="100">
+                        <input type="email" id="email" name="email" placeholder="Your email *" required maxlength="150">
+                    </div>
+                    <div class="form-row">
+                        <select id="service" name="service">
+                            <option value="Web Development">Service: Web Development</option>
+                            <option value="Bot &amp; Automation">Service: Bot &amp; Automation</option>
+                            <option value="Custom Software">Service: Custom Software</option>
+                            <option value="Other">Service: Other / Consultation</option>
+                        </select>
+                        <input type="text" id="budget" name="budget" placeholder="Estimated budget (e.g. $600 - $1,500)" maxlength="60">
+                    </div>
+                    <textarea id="message" name="message" placeholder="Tell us about your project goals, features, and timeline *" required maxlength="2000" rows="5"></textarea>
+                    <button type="submit" class="btn btn-full" id="contact-submit">Send Project Inquiry</button>
+                    <p id="contact-status" class="contact-status" role="status" aria-live="polite"></p>
+                </form>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <div class="container footer-grid">
+        <div>
+            <a href="/index.html" class="logo">AURA<span>TECH</span></a>
+            <p class="footer-tagline">Technology. Innovation. Excellence.</p>
+        </div>
+        <div class="footer-links">
+            <a href="/about.html">About</a>
+            <a href="/services.html">Services</a>
+            <a href="/work.html">Work</a>
+            <a href="/products.html">Products</a>
+            <a href="/contact.html">Contact</a>
+        </div>
+        <div class="footer-copy">
+            © <span id="year"></span> <span>AURA TECH</span>. All Rights Reserved.
+        </div>
+    </div>
+</footer>
+
+<script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+<script src="/js/main.js"></script>
+</body>
+</html>
