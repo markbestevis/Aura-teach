@@ -812,4 +812,29 @@ footer {
         flex-direction: column;
         text-align: center;
     }
-}
+    if (applyEstBtn) {
+        applyEstBtn.addEventListener('click', function () {
+            var params = new URLSearchParams({
+                service: currentEstimate.label,
+                budget: '~$' + currentEstimate.price.toLocaleString() + ' (' + currentEstimate.weeks + ' wks)',
+                weeks: currentEstimate.weeks
+            });
+            window.location.href = '/contact.html?' + params.toString();
+        });
+    }
+
+    var urlParams = new URLSearchParams(window.location.search);
+    if (urlParams.has('service') && document.getElementById('contact-form')) {
+        var svc = urlParams.get('service');
+        var bdg = urlParams.get('budget');
+        var wks = urlParams.get('weeks');
+        var serviceSelect = document.getElementById('service');
+        var budgetInput = document.getElementById('budget');
+        var msgBox = document.getElementById('message');
+
+        if (serviceSelect) serviceSelect.value = svc;
+        if (budgetInput) budgetInput.value = bdg;
+        if (msgBox && !msgBox.value.trim()) {
+            msgBox.value = 'Hi AURA TECH, I locked in an estimate for a ' + svc + ' project (' + bdg + ', ' + wks + ' weeks). Here are my project details:\n';
+        }
+    }
