@@ -1,210 +1,601 @@
-<!DOCTYPE html><html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="description" content="AURA TECH creates premium websites, business software and intelligent automation solutions.">
-<meta name="theme-color" content="#080808">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="AURA TECH creates premium websites, business software and intelligent automation solutions.">
+    <meta name="theme-color" content="#080808">
+    <title>AURA TECH | Technology. Innovation. Excellence.</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
 
-<title>AURA TECH | Technology. Innovation. Excellence.</title>
+<div class="cursor-glow" id="cursor-glow"></div>
 
-<link rel="stylesheet" href="/css/style.css">
+<header id="navbar">
+    <div class="container navbar">
+        <a href="#home" class="logo">AURA<span>TECH</span></a>
 
-</head><body><header>
-    <div class="container navbar">    <a href="#" class="logo">AURA<span>TECH</span></a>
+        <button class="menu-toggle" id="menu-toggle" aria-label="Toggle navigation">
+            <span></span><span></span><span></span>
+        </button>
 
-    <nav>
-        <ul class="nav-links">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#products">Products</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
+        <nav id="nav-menu">
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#work">Work</a></li>
+                <li><a href="#estimator">Estimator</a></li>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#contact" class="nav-cta">Start a Project</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
 
-    <a href="#contact" class="btn">Get Started</a>
+<main>
+    <!-- HERO -->
+    <section class="hero" id="home">
+        <div class="hero-grid-bg"></div>
+        <div class="container hero-content reveal">
+            <span class="hero-label">NEXT-GEN DIGITAL ENGINEERING</span>
+            <h1>
+                Building The <span>Future</span><br>
+                Through Technology
+            </h1>
+            <p>
+                We engineer high-converting websites, custom business software,
+                and intelligent automation systems built to scale your operations.
+            </p>
+            <div class="hero-actions">
+                <a href="#estimator" class="btn">Estimate Your Project</a>
+                <a href="#work" class="btn-outline">View Our Work</a>
+            </div>
 
+            <div class="metrics-bar">
+                <div class="metric">
+                    <strong>99.9%</strong>
+                    <span>System Uptime</span>
+                </div>
+                <div class="metric-divider"></div>
+                <div class="metric">
+                    <strong>24/7</strong>
+                    <span>Automated Workflows</span>
+                </div>
+                <div class="metric-divider"></div>
+                <div class="metric">
+                    <strong>100%</strong>
+                    <span>Custom Architecture</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="section about" id="about">
+        <div class="container about-grid reveal">
+            <div class="about-text">
+                <small class="eyebrow">WHO WE ARE</small>
+                <h2>Technology With Purpose</h2>
+                <p>
+                    AURA TECH is a digital engineering studio dedicated to building reliable,
+                    high-impact software. We bridge the gap between sleek design and heavy-duty
+                    backend automation so businesses can operate faster with fewer manual bottlenecks.
+                </p>
+                <ul class="check-list">
+                    <li><span>✦</span> Clean, scalable full-stack architecture</li>
+                    <li><span>✦</span> Security-first engineering &amp; fast load speeds</li>
+                    <li><span>✦</span> Direct founder-to-engineer collaboration</li>
+                </ul>
+            </div>
+            <div class="about-panel">
+                <div class="code-card">
+                    <div class="code-header">
+                        <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
+                        <small>aura-core.config.js</small>
+                    </div>
+                    <pre><code>const AURA_TECH = {
+  mission: "Automate &amp; Elevate",
+  stack: ["Node.js", "AI Bots", "Cloud UI"],
+  performance: "99/100 Lighthouse",
+  status: "Ready to Deploy"
+};</code></pre>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section class="section" id="services">
+        <div class="container">
+            <div class="section-heading reveal">
+                <small>WHAT WE DO</small>
+                <h2>Core Capabilities</h2>
+                <p>End-to-end digital solutions designed to move your business forward.</p>
+            </div>
+
+            <div class="services-grid">
+                <div class="card reveal">
+                    <div class="card-icon">✦</div>
+                    <h3>Web Development</h3>
+                    <p>
+                        Ultra-fast, responsive web applications and luxury brand websites
+                        engineered to convert visitors into clients.
+                    </p>
+                    <ul class="card-tags">
+                        <li>Landing Pages</li>
+                        <li>Web Apps</li>
+                        <li>E-Commerce</li>
+                    </ul>
+                </div>
+
+                <div class="card reveal">
+                    <div class="card-icon">⚙</div>
+                    <h3>Bot &amp; AI Automation</h3>
+                    <p>
+                        Custom Telegram &amp; WhatsApp bots, CRM pipelines, and automated
+                        booking/order systems that work while you sleep.
+                    </p>
+                    <ul class="card-tags">
+                        <li>Telegram Bots</li>
+                        <li>WhatsApp API</li>
+                        <li>Workflows</li>
+                    </ul>
+                </div>
+
+                <div class="card reveal">
+                    <div class="card-icon">◆</div>
+                    <h3>Custom Software</h3>
+                    <p>
+                        Tailored internal dashboards, inventory trackers, and SaaS platforms
+                        built specifically around your business logic.
+                    </p>
+                    <ul class="card-tags">
+                        <li>Dashboards</li>
+                        <li>APIs</li>
+                        <li>SaaS MVPs</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PORTFOLIO / SELECTED WORK -->
+    <section class="section about" id="work">
+        <div class="container">
+            <div class="section-heading reveal">
+                <small>SELECTED WORK</small>
+                <h2>Engineered For Impact</h2>
+                <p>A glimpse into the systems and interfaces we build for clients.</p>
+            </div>
+
+            <div class="services-grid">
+                <div class="card work-card reveal">
+                    <span class="product-tag">AUTOMATION BOT</span>
+                    <h3>AutoOrder Telegram Engine</h3>
+                    <p>
+                        Automated customer ordering, instant receipt generation, and live
+                        admin notifications—cutting manual order processing time by 80%.
+                    </p>
+                    <div class="work-meta">Node.js • Telegram API • JSON DB</div>
+                </div>
+
+                <div class="card work-card reveal">
+                    <span class="product-tag">WEB PLATFORM</span>
+                    <h3>Executive Fintech Portal</h3>
+                    <p>
+                        High-security client onboarding portal with real-time analytics,
+                        encrypted document uploads, and sub-second page transitions.
+                    </p>
+                    <div class="work-meta">Full-Stack • REST API • Responsive UI</div>
+                </div>
+
+                <div class="card work-card reveal">
+                    <span class="product-tag">INTERNAL SYSTEM</span>
+                    <h3>OmniStock Operations Hub</h3>
+                    <p>
+                        Unified inventory and dispatch dashboard connecting storefront sales
+                        directly to warehouse fulfillment teams.
+                    </p>
+                    <div class="work-meta">Custom Software • Webhooks • CSV Export</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- INTERACTIVE PROJECT ESTIMATOR -->
+    <section class="section" id="estimator">
+        <div class="container">
+            <div class="section-heading reveal">
+                <small>INSTANT QUOTE</small>
+                <h2>Project Cost &amp; Timeline Estimator</h2>
+                <p>Configure your project scope to get an instant ballpark estimate.</p>
+            </div>
+
+            <div class="estimator-box reveal">
+                <div class="estimator-controls">
+                    <div class="est-group">
+                        <label>1. Select Solution Type</label>
+                        <div class="est-options" id="est-type">
+                            <button type="button" class="est-btn active" data-price="600" data-weeks="2" data-label="Web Development">Website / Web App</button>
+                            <button type="button" class="est-btn" data-price="450" data-weeks="1" data-label="Bot &amp; Automation">Telegram / WhatsApp Bot</button>
+                            <button type="button" class="est-btn" data-price="1200" data-weeks="4" data-label="Custom Software">Custom Software</button>
+                        </div>
+                    </div>
+
+                    <div class="est-group">
+                        <label>2. Project Complexity</label>
+                        <div class="est-options" id="est-scale">
+                            <button type="button" class="est-btn active" data-mult="1" data-addweeks="0">Starter / MVP</button>
+                            <button type="button" class="est-btn" data-mult="1.6" data-addweeks="2">Growth / Standard</button>
+                            <button type="button" class="est-btn" data-mult="2.4" data-addweeks="4">Enterprise / Full Scale</button>
+                        </div>
+                    </div>
+
+                    <div class="est-group">
+                        <label>3. Add-On Integrations</label>
+                        <div class="est-addons">
+                            <label class="addon-check"><input type="checkbox" value="250" data-weeks="1"> Payment Gateway</label>
+                            <label class="addon-check"><input type="checkbox" value="300" data-weeks="1"> Admin Dashboard</label>
+                            <label class="addon-check"><input type="checkbox" value="350" data-weeks="1"> AI Assistant Integration</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="estimator-result">
+                    <small>ESTIMATED INVESTMENT</small>
+                    <div class="est-price" id="est-price">$600</div>
+                    <div class="est-timeline">Est. Delivery: <strong id="est-timeline">2 Weeks</strong></div>
+                    <p>Includes responsive design, deployment setup, and 30 days of post-launch support.</p>
+                    <button type="button" class="btn" id="apply-estimate">Lock In This Estimate ↓</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PRODUCTS -->
+    <section class="section about" id="products">
+        <div class="container">
+            <div class="section-heading reveal">
+                <small>OUR ECOSYSTEM</small>
+                <h2>Innovation In Progress</h2>
+                <p>Proprietary software products built by AURA TECH. Join early access.</p>
+            </div>
+
+            <div class="products-grid">
+                <div class="card product-card reveal">
+                    <span class="product-tag">COMING SOON</span>
+                    <h3>AURA Business Suite</h3>
+                    <p>
+                        An all-in-one business management platform for customers,
+                        orders, and automated WhatsApp communication.
+                    </p>
+                    <button type="button" class="btn-outline btn-sm waitlist-trigger" data-product="AURA Business Suite">Join Early Access</button>
+                </div>
+
+                <div class="card product-card reveal">
+                    <span class="product-tag">IN DEVELOPMENT</span>
+                    <h3>AURA Store</h3>
+                    <p>
+                        A streamlined commerce engine that lets businesses launch and
+                        manage high-speed online storefronts in minutes.
+                    </p>
+                    <button type="button" class="btn-outline btn-sm waitlist-trigger" data-product="AURA Store">Join Early Access</button>
+                </div>
+
+                <div class="card product-card reveal">
+                    <span class="product-tag">PLANNED</span>
+                    <h3>AURA Management</h3>
+                    <p>
+                        Smart internal operations, team task routing, and analytics
+                        tools designed to eliminate repetitive admin work.
+                    </p>
+                    <button type="button" class="btn-outline btn-sm waitlist-trigger" data-product="AURA Management">Join Early Access</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section" id="contact">
+        <div class="container">
+            <div class="contact-box reveal">
+                <div class="section-heading">
+                    <small>LET'S WORK TOGETHER</small>
+                    <h2>Have A Project In Mind?</h2>
+                    <p>Tell us about your idea and we will respond within 24 hours.</p>
+                </div>
+
+                <form id="contact-form" class="contact-form" novalidate>
+                    <div class="form-row">
+                        <input type="text" id="name" name="name" placeholder="Your name *" required maxlength="100">
+                        <input type="email" id="email" name="email" placeholder="Your email *" required maxlength="150">
+                    </div>
+                    <div class="form-row">
+                        <select id="service" name="service">
+                            <option value="Web Development">Service: Web Development</option>
+                            <option value="Bot &amp; Automation">Service: Bot &amp; Automation</option>
+                            <option value="Custom Software">Service: Custom Software</option>
+                            <option value="Other">Service: Other / Consultation</option>
+                        </select>
+                        <input type="text" id="budget" name="budget" placeholder="Estimated budget (e.g. $600 - $1,500)" maxlength="60">
+                    </div>
+                    <textarea id="message" name="message" placeholder="Tell us about your project goals, features, and timeline *" required maxlength="2000" rows="5"></textarea>
+                    <button type="submit" class="btn btn-full" id="contact-submit">Send Project Inquiry</button>
+                    <p id="contact-status" class="contact-status" role="status" aria-live="polite"></p>
+                </form>
+            </div>
+        </div>
+    </section>
+</main>
+
+<!-- WAITLIST MODAL -->
+<div class="modal-backdrop" id="waitlist-modal" aria-hidden="true">
+    <div class="modal-card">
+        <button type="button" class="modal-close" id="modal-close" aria-label="Close modal">&times;</button>
+        <span class="product-tag">EARLY ACCESS</span>
+        <h3 id="modal-title">Join AURA Waitlist</h3>
+        <p>Be the first to get beta access and launch discounts.</p>
+        <form id="waitlist-form">
+            <input type="hidden" id="waitlist-product" name="product">
+            <input type="email" id="waitlist-email" name="email" placeholder="Enter your best email" required>
+            <button type="submit" class="btn btn-full" id="waitlist-submit">Request Early Access</button>
+            <p id="waitlist-status" class="contact-status"></p>
+        </form>
+    </div>
 </div>
 
-</header><main><section class="hero" id="home">
-
-    <div class="container hero-content">
-
-        <span class="hero-label">WELCOME TO AURA TECH</span>
-
-        <h1>
-            Building The <span>Future</span><br>
-            Through Technology
-        </h1>
-
-        <p>
-            We create modern digital experiences, powerful business
-            software and intelligent automation solutions that help
-            businesses grow.
-        </p>
-
-        <div class="hero-actions">
-            <a href="#services" class="btn">Explore Services</a>
-            <a href="#contact" class="btn-outline">Contact Us</a>
+<footer>
+    <div class="container footer-grid">
+        <div>
+            <a href="#home" class="logo">AURA<span>TECH</span></a>
+            <p class="footer-tagline">Technology. Innovation. Excellence.</p>
         </div>
-
+        <div class="footer-links">
+            <a href="#about">About</a>
+            <a href="#services">Services</a>
+            <a href="#work">Work</a>
+            <a href="#estimator">Estimator</a>
+            <a href="#contact">Contact</a>
+        </div>
+        <div class="footer-copy">
+            © <span id="year"></span> <span>AURA TECH</span>. All Rights Reserved.
+        </div>
     </div>
+</footer>
 
-</section>
-
-<section class="section about" id="about">
-
-    <div class="container about-content">
-
-        <div class="section-heading">
-            <small>WHO WE ARE</small>
-            <h2>Technology With Purpose</h2>
-        </div>
-
-        <p>
-            AURA TECH is a technology-focused company dedicated to
-            building reliable digital solutions. We combine creativity,
-            innovation and engineering to help individuals and businesses
-            solve real-world problems.
-        </p>
-
-    </div>
-
-</section>
-
-<section class="section" id="services">
-
-    <div class="container">
-
-        <div class="section-heading">
-            <small>WHAT WE DO</small>
-            <h2>Our Services</h2>
-            <p>Digital solutions designed to move your business forward.</p>
-        </div>
-
-        <div class="services-grid">
-
-            <div class="card">
-                <div class="card-icon">✦</div>
-                <h3>Web Development</h3>
-                <p>
-                    Modern, responsive and professional websites
-                    designed for businesses and individuals.
-                </p>
-            </div>
-
-            <div class="card">
-                <div class="card-icon">⚙</div>
-                <h3>Bot Development</h3>
-                <p>
-                    Custom Telegram bots and business automation
-                    solutions that simplify everyday tasks.
-                </p>
-            </div>
-
-            <div class="card">
-                <div class="card-icon">◆</div>
-                <h3>Custom Software</h3>
-                <p>
-                    Powerful software systems built around your
-                    business needs and requirements.
-                </p>
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-<section class="section about" id="products">
-
-    <div class="container">
-
-        <div class="section-heading">
-            <small>OUR PRODUCTS</small>
-            <h2>Innovation In Progress</h2>
-            <p>Building digital products that make business easier.</p>
-        </div>
-
-        <div class="products-grid">
-
-            <div class="card">
-                <span class="product-tag">COMING SOON</span>
-                <h3>AURA Business Suite</h3>
-                <p>
-                    A business management platform for customers,
-                    orders and WhatsApp communication.
-                </p>
-            </div>
-
-            <div class="card">
-                <span class="product-tag">PLANNED</span>
-                <h3>AURA Store</h3>
-                <p>
-                    A platform that helps businesses create and
-                    manage their own online stores.
-                </p>
-            </div>
-
-            <div class="card">
-                <span class="product-tag">PLANNED</span>
-                <h3>AURA Management</h3>
-                <p>
-                    Smart management tools designed to simplify
-                    business operations.
-                </p>
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-<section class="section" id="contact">
-
-    <div class="container">
-
-        <div class="contact-box">
-
-            <div class="section-heading">
-                <small>LET'S WORK TOGETHER</small>
-                <h2>Have A Project In Mind?</h2>
-            </div>
-
-            <p>
-                Let's turn your ideas into powerful digital solutions.
-                Tell us about your project below.
-            </p>
-
-            <form id="contact-form" class="contact-form" novalidate>
-                <div class="form-row">
-                    <input type="text" id="name" name="name" placeholder="Your name" required maxlength="100">
-                    <input type="email" id="email" name="email" placeholder="Your email" required maxlength="150">
-                </div>
-                <textarea id="message" name="message" placeholder="Tell us about your project" required maxlength="2000" rows="5"></textarea>
-                <button type="submit" class="btn" id="contact-submit">Send Message</button>
-                <p id="contact-status" class="contact-status" role="status" aria-live="polite"></p>
-            </form>
-
-        </div>
-
-    </div>
-
-</section>
-
-</main><footer>
-    <div class="container">
-        <p>
-            © <span id="year"></span> <span>AURA TECH</span>.
-            All Rights Reserved.
-        </p>
-        <p>Technology. Innovation. Excellence.</p>
-    </div>
-</footer><script>
-    document.getElementById('year').textContent =
-        new Date().getFullYear();
+<script>
+    document.getElementById('year').textContent = new Date().getFullYear();
 </script>
 <script src="/js/main.js"></script>
 </body>
 </html>
+// public/js/main.js
+document.addEventListener('DOMContentLoaded', () => {
+    // 1. Mobile Navigation Toggle
+    const menuToggle = document.getElementById('menu-toggle');
+    const navMenu    = document.getElementById('nav-menu');
+
+    if (menuToggle && navMenu) {
+        menuToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('open');
+        });
+        navMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => navMenu.classList.remove('open'));
+        });
+    }
+
+    // 2. Ambient Cursor Glow (Desktop)
+    const glow = document.getElementById('cursor-glow');
+    if (glow && window.matchMedia('(pointer: fine)').matches) {
+        window.addEventListener('mousemove', (e) => {
+            glow.style.left = `${e.clientX}px`;
+            glow.style.top  = `${e.clientY}px`;
+        });
+    }
+
+    // 3. Scroll Reveal Observer
+    const revealEls = document.querySelectorAll('.reveal');
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.12 });
+
+    revealEls.forEach(el => observer.observe(el));
+
+    // 4. Interactive Project Estimator
+    const typeBtns     = document.querySelectorAll('#est-type .est-btn');
+    const scaleBtns    = document.querySelectorAll('#est-scale .est-btn');
+    const addonChecks  = document.querySelectorAll('.addon-check input');
+    const priceDisplay = document.getElementById('est-price');
+    const timeDisplay  = document.getElementById('est-timeline');
+    const applyEstBtn  = document.getElementById('apply-estimate');
+
+    let currentEstimate = { label: 'Web Development', price: 600, weeks: 2 };
+
+    function calculateEstimate() {
+        const activeType  = document.querySelector('#est-type .est-btn.active');
+        const activeScale = document.querySelector('#est-scale .est-btn.active');
+        if (!activeType || !activeScale) return;
+
+        let basePrice = Number(activeType.dataset.price);
+        let baseWeeks = Number(activeType.dataset.weeks);
+        const mult    = Number(activeScale.dataset.mult);
+        const addWks  = Number(activeScale.dataset.addweeks);
+
+        let addonsPrice = 0;
+        let addonsWeeks = 0;
+        addonChecks.forEach(chk => {
+            if (chk.checked) {
+                addonsPrice += Number(chk.value);
+                addonsWeeks += Number(chk.dataset.weeks || 0);
+            }
+        });
+
+        const totalPrice = Math.round((basePrice * mult) + addonsPrice);
+        const totalWeeks = baseWeeks + addWks + addonsWeeks;
+
+        currentEstimate = {
+            label: activeType.dataset.label,
+            price: totalPrice,
+            weeks: totalWeeks
+        };
+
+        priceDisplay.textContent = `$${totalPrice.toLocaleString()}`;
+        timeDisplay.textContent  = `${totalWeeks} ${totalWeeks === 1 ? 'Week' : 'Weeks'}`;
+    }
+
+    typeBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            typeBtns.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            calculateEstimate();
+        });
+    });
+
+    scaleBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            scaleBtns.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            calculateEstimate();
+        });
+    });
+
+    addonChecks.forEach(chk => chk.addEventListener('change', calculateEstimate));
+
+    if (applyEstBtn) {
+        applyEstBtn.addEventListener('click', () => {
+            const serviceSelect = document.getElementById('service');
+            const budgetInput   = document.getElementById('budget');
+            const msgBox        = document.getElementById('message');
+
+            if (serviceSelect) serviceSelect.value = currentEstimate.label;
+            if (budgetInput) budgetInput.value = `~$${currentEstimate.price.toLocaleString()} (${currentEstimate.weeks} wks)`;
+            if (msgBox && !msgBox.value.trim()) {
+                msgBox.value = `Hi AURA TECH, I used your estimator for a ${currentEstimate.label} project (~$${currentEstimate.price.toLocaleString()}, ${currentEstimate.weeks} weeks). Here are my details:\n`;
+            }
+
+            document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
+        });
+    }
+
+    // 5. Product Waitlist Modal
+    const modal         = document.getElementById('waitlist-modal');
+    const modalClose    = document.getElementById('modal-close');
+    const modalTitle    = document.getElementById('modal-title');
+    const waitlistProd  = document.getElementById('waitlist-product');
+    const waitlistForm  = document.getElementById('waitlist-form');
+    const waitlistStat  = document.getElementById('waitlist-status');
+    const waitlistSub   = document.getElementById('waitlist-submit');
+
+    document.querySelectorAll('.waitlist-trigger').forEach(btn => {
+        btn.addEventListener('click', () => {
+            const product = btn.dataset.product;
+            modalTitle.textContent = `Join ${product}`;
+            waitlistProd.value = product;
+            waitlistStat.textContent = '';
+            waitlistStat.className = 'contact-status';
+            modal.classList.add('open');
+        });
+    });
+
+    if (modalClose) {
+        modalClose.addEventListener('click', () => modal.classList.remove('open'));
+    }
+    if (modal) {
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) modal.classList.remove('open');
+        });
+    }
+
+    if (waitlistForm) {
+        waitlistForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const email   = document.getElementById('waitlist-email').value.trim();
+            const product = waitlistProd.value;
+
+            waitlistSub.disabled = true;
+            waitlistSub.textContent = 'Joining...';
+
+            try {
+                const res = await fetch('/api/waitlist', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ email, product })
+                });
+                const data = await res.json();
+                if (res.ok && data.ok) {
+                    waitlistStat.textContent = data.message;
+                    waitlistStat.className = 'contact-status success';
+                    waitlistForm.reset();
+                } else {
+                    waitlistStat.textContent = data.error || 'Unable to join waitlist.';
+                    waitlistStat.className = 'contact-status error';
+                }
+            } catch {
+                waitlistStat.textContent = 'Network error. Please try again.';
+                waitlistStat.className = 'contact-status error';
+            } finally {
+                waitlistSub.disabled = false;
+                waitlistSub.textContent = 'Request Early Access';
+            }
+        });
+    }
+
+    // 6. Contact Form Submission
+    const form   = document.getElementById('contact-form');
+    const status = document.getElementById('contact-status');
+    const submit = document.getElementById('contact-submit');
+
+    if (form) {
+        form.addEventListener('submit', async (e) => {
+            e.preventDefault();
+
+            const name    = document.getElementById('name').value.trim();
+            const email   = document.getElementById('email').value.trim();
+            const service = document.getElementById('service').value;
+            const budget  = document.getElementById('budget').value.trim();
+            const message = document.getElementById('message').value.trim();
+
+            if (!name || !email || !message) {
+                setStatus('Please fill in all required fields.', 'error');
+                return;
+            }
+
+            submit.disabled = true;
+            submit.textContent = 'Sending Inquiry...';
+            setStatus('', '');
+
+            try {
+                const res = await fetch('/api/contact', {
+                    method:  'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body:    JSON.stringify({ name, email, service, budget, message }),
+                });
+                const data = await res.json();
+
+                if (res.ok && data.ok) {
+                    setStatus(data.message || 'Message sent successfully.', 'success');
+                    form.reset();
+                } else {
+                    setStatus(data.error || 'Something went wrong. Please try again.', 'error');
+                }
+            } catch {
+                setStatus('Network error. Please check your connection and try again.', 'error');
+            } finally {
+                submit.disabled = false;
+                submit.textContent = 'Send Project Inquiry';
+            }
+        });
+    }
+
+    function setStatus(text, type) {
+        status.textContent = text;
+        status.className = 'contact-status' + (type ? ' ' + type : '');
+    }
+});
