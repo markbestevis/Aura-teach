@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Learn about AURA TECH—our mission, engineering standards, and technology stack.">
+    <meta name="theme-color" content="#080808">
+    <title>About Us | AURA TECH</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+<div class="cursor-glow" id="cursor-glow"></div>
+
+<header id="navbar">
+    <div class="container navbar">
+        <a href="/index.html" class="logo">AURA<span>TECH</span></a>
+
+        <button class="menu-toggle" id="menu-toggle" aria-label="Toggle navigation">
+            <span></span><span></span><span></span>
+        </button>
+
+        <nav id="nav-menu">
+            <ul class="nav-links">
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/about.html" class="active-link">About</a></li>
+                <li><a href="/services.html">Services</a></li>
+                <li><a href="/work.html">Work</a></li>
+                <li><a href="/products.html">Products</a></li>
+                <li><a href="/contact.html" class="nav-cta">Start a Project</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<main>
+    <section class="page-banner">
+        <div class="container reveal">
+            <small class="eyebrow">WHO WE ARE</small>
+            <h1>Technology With <span>Purpose</span></h1>
+            <p>
+                AURA TECH is a digital engineering studio dedicated to building reliable,
+                high-impact websites, business software, and intelligent automation.
+            </p>
+        </div>
+    </section>
+
+    <section class="section about">
+        <div class="container about-grid reveal">
+            <div class="about-text">
+                <small class="eyebrow">OUR MISSION</small>
+                <h2>Bridging Design &amp; Heavy-Duty Automation</h2>
+                <p>
+                    Many businesses lose hours every week to manual order tracking, slow websites,
+                    and disconnected tools. We solve that by pairing clean, luxury interfaces with
+                    fast backend automation so your operations run smoothly 24/7.
+                </p>
+                <ul class="check-list">
+                    <li><span>✦</span> Clean, scalable full-stack architecture</li>
+                    <li><span>✦</span> Security-first engineering &amp; rapid load speeds</li>
+                    <li><span>✦</span> Direct founder-to-engineer collaboration</li>
+                    <li><span>✦</span> 30 days of dedicated post-launch support</li>
+                </ul>
+            </div>
+
+            <div class="about-panel">
+                <div class="code-card">
+                    <div class="code-header">
+                        <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
+                        <small>aura-core.config.js</small>
+                    </div>
+                    <pre><code>const AURA_TECH = {
+  mission: "Automate &amp; Elevate",
+  stack: ["Node.js", "AI Bots", "Cloud UI"],
+  performance: "99/100 Lighthouse",
+  status: "Ready to Deploy"
+};</code></pre>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <div class="section-heading reveal">
+                <small>HOW WE BUILD</small>
+                <h2>Our 3-Step Delivery Process</h2>
+                <p>Clear milestones from your first message to live deployment.</p>
+            </div>
+
+            <div class="services-grid">
+                <div class="card reveal">
+                    <span class="product-tag">STEP 01</span>
+                    <h3>Discovery &amp; Architecture</h3>
+                    <p>
+                        We map out your exact workflow, user journey, and technical requirements
+                        before writing a single line of code.
+                    </p>
+                </div>
+
+                <div class="card reveal">
+                    <span class="product-tag">STEP 02</span>
+                    <h3>Rapid Engineering</h3>
+                    <p>
+                        We build your frontend, APIs, and automation pipelines with regular
+                        live preview links so you can test progress in real time.
+                    </p>
+                </div>
+
+                <div class="card reveal">
+                    <span class="product-tag">STEP 03</span>
+                    <h3>Launch &amp; Scale</h3>
+                    <p>
+                        We deploy to high-uptime cloud servers, verify security and speed,
+                        and provide full handover documentation.
+                    </p>
+                </div>
+            </div>
+
+            <div style="text-align:center; margin-top:50px;" class="reveal">
+                <a href="/services.html" class="btn">Explore Our Services →</a>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <div class="container footer-grid">
+        <div>
+            <a href="/index.html" class="logo">AURA<span>TECH</span></a>
+            <p class="footer-tagline">Technology. Innovation. Excellence.</p>
+        </div>
+        <div class="footer-links">
+            <a href="/about.html">About</a>
+            <a href="/services.html">Services</a>
+            <a href="/work.html">Work</a>
+            <a href="/products.html">Products</a>
+            <a href="/contact.html">Contact</a>
+        </div>
+        <div class="footer-copy">
+            © <span id="year"></span> <span>AURA TECH</span>. All Rights Reserved.
+        </div>
+    </div>
+</footer>
+
+<script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+<script src="/js/main.js"></script>
+</body>
+</html>
